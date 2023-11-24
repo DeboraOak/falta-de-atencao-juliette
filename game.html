@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game-Spotify</title>
+    <style>
+        .container {
+            min-height: 10vh;
+        }
+
+        .container div>p span {
+            color: red;
+        }
+
+        button {
+            cursor: pointer;
+            border: 0;
+            border-radius: 4px;
+            font-weight: 600;
+            margin: 0 10px;
+            width: 200px;
+            padding: 10px 0;
+            box-shadow: 0 0 20px rgba(104, 85, 224, 0.2);
+            transition: 0.4s;
+            background-color: #19E68C;
+        }
+
+        .reg {
+            color: white;
+            background-color: #19E68C;
+        }
+
+        .log {
+            color: #19E68C;
+            background-color: white;
+            border: 1px solid #19E68C;
+        }
+
+        button:hover {
+            color: white;
+            box-shadow: 0 0 20px #CBF560;
+            background-color: #19E68C;
+        }
+
+        iframe .spotify {
+            min-height: 360px;
+            width: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" style="flex: 1; margin-bottom: 10px;">
+        <button onclick="loginWithSpotify()">Login with Spotify</button>
+        <div id="user-info"></div>
+    </div>
+    <div>
+        <!-- Spotify -->
+        <iframe id="spotify" title="Spotify Embed: Recommendation Playlist"
+            src="https://open.spotify.com/embed/playlist/0X0H0AUS08ScYlOHUaKDE0?utm_source=generator&theme=0"
+            frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+        </iframe>
+    </div>
+    <div>
+        <!-- GDevelop Game -->
+        <iframe src="/index.html" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

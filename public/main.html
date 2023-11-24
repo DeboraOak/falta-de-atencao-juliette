@@ -27,17 +27,6 @@
             background-color: #19E68C;
         }
 
-        .reg {
-            color: white;
-            background-color: #19E68C;
-        }
-
-        .log {
-            color: #19E68C;
-            background-color: white;
-            border: 1px solid #19E68C;
-        }
-
         button:hover {
             color: white;
             box-shadow: 0 0 20px #CBF560;
@@ -56,6 +45,7 @@
         <button onclick="loginWithSpotify()">Login with Spotify</button>
         <div id="user-info"></div>
     </div>
+
     <div>
         <!-- Spotify -->
         <iframe id="spotify" title="Spotify Embed: Recommendation Playlist"
@@ -64,10 +54,9 @@
         </iframe>
     </div>
     <div>
-        <!-- GDevelop Game -->
         <iframe src="/index.html" width="800" height="600" frameborder="0" scrolling="no"></iframe>
     </div>
-    <script src="script.js"></script>
+    <script src="/spotify.js"></script> 
 </body>
 
 </html>

@@ -1,10 +1,18 @@
 function loginWithSpotify() {
-    console.log("Fazendo login no spotfy...");
-    const clientId = "fdfbb0ce4c0f420a982b2fe83334693b";
-    const redirectUri = "https://7ca8-189-85-93-192.ngrok-free.app";
-    const scope = 'user-read-private user-read-email'; // Adicione os escopos necessários
-    const authorizeUrl = `https://accounts.spotify.com/authorize?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${encodeURIComponent(scope)}&response_type=token`;
-    window.location.href = authorizeUrl;
+    // Fetch the sensitive data from the server
+    fetch('/getSecretData')
+        .then(response => response.json())
+        .then(data => {
+            console.log(data)
+            const clientId = data.client_id;
+            const redirectUri = "https://769c-2804-26d8-201-28-78-d847-ff55-663f.ngrok-free.app/game";
+            const scope = 'user-read-private user-read-email';
+            console.log("Fazendo login no spotify...");
+            const authorizeUrl = `https://accounts.spotify.com/authorize?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${encodeURIComponent(scope)}&response_type=token`;
+            window.location.href = authorizeUrl;
+
+        })
+        .catch(error => console.error('Error fetching secret data:', error));
 }
 
 function handleRedirect() {
@@ -27,7 +35,7 @@ function getUserInfo(accessToken) {
         .then(response => response.json())
         .then(data => {
             const userInfoElement = document.getElementById('user-info');
-            userInfoElement.innerHTML = `<p>Welcome, ${data.display_name}!</p>`;
+            userInfoElement.innerHTML = `<p>Bem Vindo(a), ${data.display_name}!</p>`;
         })
         .catch(error => console.error('Error fetching user info:', error));
 }

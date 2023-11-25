@@ -3,13 +3,22 @@ const express = require('express');
 const cors = require('cors');
 
 const app = express();
-const port = process.env.PORT;
+const port = process.env.PORT
 
 app.use(cors());
 
 app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/public/login.html');
+});
+
+app.get('/game', (req, res) => {
     res.sendFile(__dirname + '/public/main.html');
 });
+
+app.get('/getSecretData', (req, res) => {
+    const client_id = process.env.CLIENT_ID;
+    res.send({port, client_id});
+  });
 
 app.use(express.static("public"));
 

@@ -5,7 +5,7 @@ function loginWithSpotify() {
         .then(data => {
             console.log(data)
             const clientId = data.client_id;
-            const redirectUri = "https://769c-2804-26d8-201-28-78-d847-ff55-663f.ngrok-free.app/game";
+            const redirectUri = data.redirect_uri;
             const scope = 'user-read-private user-read-email';
             console.log("Fazendo login no spotify...");
             const authorizeUrl = `https://accounts.spotify.com/authorize?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${encodeURIComponent(scope)}&response_type=token`;

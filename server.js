@@ -17,7 +17,8 @@ app.get('/game', (req, res) => {
 
 app.get('/getSecretData', (req, res) => {
     const client_id = process.env.CLIENT_ID;
-    res.send({port, client_id});
+    const redirect_uri = process.env.REDIRECT_URI;
+    res.send({port, client_id, redirect_uri});
   });
 
 app.use(express.static("public"));

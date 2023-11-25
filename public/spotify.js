@@ -1,8 +1,8 @@
-const clientId = 'client_id';
-const redirectUri = 'https://localhost:8080/callback';
-const scope = 'user-read-private user-read-email'; // Adicione os escopos necessários
-
 function loginWithSpotify() {
+    console.log("Fazendo login no spotfy...");
+    const clientId = "fdfbb0ce4c0f420a982b2fe83334693b";
+    const redirectUri = "https://7ca8-189-85-93-192.ngrok-free.app";
+    const scope = 'user-read-private user-read-email'; // Adicione os escopos necessários
     const authorizeUrl = `https://accounts.spotify.com/authorize?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${encodeURIComponent(scope)}&response_type=token`;
     window.location.href = authorizeUrl;
 }

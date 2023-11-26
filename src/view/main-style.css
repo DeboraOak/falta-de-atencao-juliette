@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* overflow: hidden; */
+    background-color: #fff;
+}
+
+.float-container {
+    display: flex;
+    flex: 1;
+    padding: 20px;
+    border: 3px solid #fff;
+}
+
+.description {
+    width: 50%;
+    padding: 20px;
+    border: 2px solid red;
+}
+
+.description img {
+    width: 100%;
+    height: 50%;
+}
+
+.spotify-iframe {
+    width: 30%;
+    padding: 20px;
+    border: 2px solid red;
+}
+
+.game-iframe {
+    flex: 7; /* Change the flex value to 7 for 70% height */
+    padding: 20px;
+    border: 2px solid red;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}

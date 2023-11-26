@@ -1,0 +1,62 @@
+{
+    "parserOptions": {
+        "ecmaVersion": 9,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true,
+            "experimentalObjectRestSpread": true,
+            "globalReturn": true
+        }
+    },
+    "rules": {
+        "indent": [
+            2,
+            4,
+            {"SwitchCase": 1}
+        ],
+        "quotes": [
+            2,
+            "double"
+        ],
+        "linebreak-style": [
+            2,
+            "unix",
+            "windows"
+        ],
+        "semi": [
+            2,
+            "always"
+        ],
+        "dot-notation": 0,
+        "camelcase": 0,
+        "strict": 0,
+        "no-var": 2,
+        "prefer-const": 2,
+        "prefer-rest-params": 2,
+        "no-unreachable": 2,
+        "eol-last": 2,
+        "key-spacing": [2, {"beforeColon": false, "afterColon": true}],
+        "keyword-spacing": [2, {
+            "before": true,
+            "after": true
+        }],
+        "no-multiple-empty-lines": [2, {"max": 2, "maxEOF": 1}],
+        "no-trailing-spaces": 2,
+        "eqeqeq": 2,
+        "no-console": 0,
+        "no-alert": 1,
+        "complexity": [0, 11],
+        "space-before-function-paren": 2,
+        "comma-spacing": [2, {"before": false, "after": true}],
+        "no-unsafe-optional-chaining": "off",
+        "no-loss-of-precision": "off",
+        "no-nonoctal-decimal-escape": "off",
+        "no-useless-backreference": "off"
+    },
+    "env": {
+        "es6": true,
+        "node": true,
+        "browser": true
+    },
+    "extends": "eslint:recommended"
+}

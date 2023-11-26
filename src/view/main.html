@@ -9,22 +9,53 @@
 </head>
 
 <body>
-    <div class="float-container">
-        <div class="description">
-            <img src="https://2.bp.blogspot.com/-jT9ZpDBHxYw/VxKiXFTT36I/AAAAAAAADFM/AlTh08RdX6YYeba-ZNPkZv37dA2CzkyJACLcB/s1600/Joelma3.png"
-                alt="">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, ratione sequi? Quisquam voluptates totam non
-                voluptate aut, commodi eum dolor hic praesentium? Quidem, odio a? Id aspernatur ut sunt provident!</p>
+    <div class="flex-container">
+        <div class="header">
+
+            <div class="album-details">
+                <img src="../images/calypso-logo.png" alt="Banda Calypso Logo">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate dolorum nesciunt voluptate qui
+                    officia
+                    cum sapiente quae aperiam eius dicta? Laboriosam neque suscipit excepturi necessitatibus voluptate
+                    autem
+                    voluptatem, nulla.</p>
+            </div>
+
+            <div class="spotify-iframe">
+                <iframe
+                    src="https://open.spotify.com/embed/playlist/0X0H0AUS08ScYlOHUaKDE0?utm_source=generator&theme=0"
+                    frameborder="0" allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture'>
+                </iframe>
+            </div>
+
         </div>
-        <div class="spotify-iframe">
-            <iframe src="https://open.spotify.com/embed/playlist/0X0H0AUS08ScYlOHUaKDE0?utm_source=generator&theme=0"
-                frameborder="0"
-                allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture'></iframe>
+
+        <div class="game-container">
+
+            <iframe class="game-iframe"
+                src="../../game/index.html"
+                frameborder="0" allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture'>
+            </iframe>
+
+            <img class="full-screen" onclick="toggleFullscreen()" src="../images/full-screen-icon.png" alt="">
         </div>
+        <button onclick="logoutSpotify()">Desconetar do Spotify</button>
     </div>
-    <div class="game-iframe">
-        <iframe id="game" src="../game/index.html" frameborder="0" scrolling="no"></iframe>
-    </div>
+
+    <script>
+        function toggleFullscreen() {
+            var iframe = document.getElementsByClassName('game-iframe')[0];
+            if (iframe.requestFullscreen) {
+                iframe.requestFullscreen();
+            } else if (iframe.mozRequestFullScreen) { /* Firefox */
+                iframe.mozRequestFullScreen();
+            } else if (iframe.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+                iframe.webkitRequestFullscreen();
+            } else if (iframe.msRequestFullscreen) { /* IE/Edge */
+                iframe.msRequestFullscreen();
+            }
+        }
+    </script>
 </body>
 
 </html>

@@ -4,47 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game-Spotify</title>
-    <style>
-        .container {
-            min-height: 50vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        button {
-            cursor: pointer;
-            border: 0;
-            border-radius: 4px;
-            font-weight: 600;
-            margin: 0 10px;
-            width: 200px;
-            padding: 10px 0;
-            box-shadow: 0 0 20px rgba(104, 85, 224, 0.2);
-            transition: 0.4s;
-            background-color: #19E68C;
-        }
-
-        button:hover {
-            color: white;
-            box-shadow: 0 0 20px #19E68C;
-            background-color: #19E68C;
-        }
-
-        iframe .spotify {
-            min-height: 360px;
-            width: 50%;
-        }
-    </style>
+    <link rel="stylesheet" href="../view/login-style.css">
+    <title>Autenticação</title>
 </head>
 
 <body>
-    <div class="container" style="flex: 1; margin-bottom: 10px;">
-        <button onclick="loginWithSpotify()">Login with Spotify</button>
-        <div id="user-info"></div>
+    <div class="container-login">
+        <div class="album-details">
+            <img src="../images/calypso-logo.png" alt="Banda Calypso Logo">
+        </div>
+        <div class="album-info">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate dolorum nesciunt voluptate qui
+                officia
+                cum sapiente quae aperiam eius dicta? Laboriosam neque suscipit excepturi necessitatibus voluptate autem
+                voluptatem, nulla libero.</p>
+        </div>
+        <div class="login-button" style="flex: 1; margin-bottom: 10px;">
+            <button onclick="loginWithSpotify()">Entrar com Spotify e Jogar</button>
+            <div id="user-info"></div>
+        </div>
     </div>
-    <script src="util/spotify.js"></script> 
+    <script src="util/spotify.js"></script>
 </body>
 
 </html>

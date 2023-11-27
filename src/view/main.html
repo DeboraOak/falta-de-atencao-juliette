@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="../view/main-style.css">
-    <title>Game-Spotify</title>
+    <title>Jogue Agora - Falta de Atenção</title>
 </head>
 
 <body>
@@ -22,7 +22,7 @@
             </div>
 
             <div class="spotify-iframe">
-                <iframe style="border-radius:12px"
+                <iframe id="spotify-player" style="border-radius:12px"
                     src="https://open.spotify.com/embed/album/4IWuMtqZOCu5or3RXZQ26v?utm_source=generator"
                     frameBorder="0" loading="lazy"
                     allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
@@ -39,23 +39,9 @@
 
             <img class="full-screen" onclick="toggleFullscreen()" src="../images/full-screen-icon.png" alt="">
         </div>
-        <button onclick="logoutSpotify()">Desconetar do Spotify</button>
+        <button class="logout-spotify" onclick="logoutSpotify()">Desconetar do Spotify</button>
     </div>
-
-    <script>
-        function toggleFullscreen() {
-            var iframe = document.getElementsByClassName('game-iframe')[0];
-            if (iframe.requestFullscreen) {
-                iframe.requestFullscreen();
-            } else if (iframe.mozRequestFullScreen) { /* Firefox */
-                iframe.mozRequestFullScreen();
-            } else if (iframe.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
-                iframe.webkitRequestFullscreen();
-            } else if (iframe.msRequestFullscreen) { /* IE/Edge */
-                iframe.msRequestFullscreen();
-            }
-        }
-    </script>
+    <script src="../util/spotify.js"></script>
 </body>
 
 </html>

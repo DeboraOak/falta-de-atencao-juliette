@@ -27,7 +27,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 100%;
+    width: 50%;
 }
 
 .album-details img {
@@ -46,8 +46,8 @@
 }
 
 .spotify-iframe iframe{
-    width: 70%;
-    height: 80%;
+    width: 80%;
+    height: 100%;
 }
 
 .game-container {
@@ -75,7 +75,7 @@
     margin: 1vh 3vw 0 auto;
 }
 
-button {
+button.logout-spotify {
     justify-content: center;
     align-items: center;
 
@@ -87,7 +87,7 @@ button {
     margin: auto;
 }
 
-button:hover {
+button:hover .logout-spotify{
     color: #918888;
     transition: 0.2s;
 }
@@ -95,13 +95,30 @@ button:hover {
 /* Media query para ajustar estilos em telas menores */
 @media screen and (max-width: 600px) {
 
+    .flex-container {
+        overflow: auto;
+    }
+    .header {
+        flex-direction: column;
+        padding: 0 2vw;
+        min-height: 40vh;
+    }
+
     .header img {
         width: 50%;
     }
-
+    
     .header p {
+        width: 100%;
         font-size: 12px;
-        text-align: left;
+        text-align: center;
+    }
+    
+    .album-details,
+    .spotify-iframe {
+        width: auto;
+        height: auto;
+        padding: auto;
     }
 
     .game-container .game-iframe {

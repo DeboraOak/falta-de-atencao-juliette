@@ -9,11 +9,11 @@ function loginWithSpotify() {
             console.log("Fazendo login no spotify...");
             const authorizeUrl = `https://accounts.spotify.com/authorize?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${encodeURIComponent(scope)}&response_type=token`;
             window.location.href = authorizeUrl;
-            
+
             // Chamado quando a pagina e redirecionada de volta apos o login
             handleRedirect();
         })
-        .catch(error => console.error('Error fetching secret data:', error));    
+        .catch(error => console.error('Error fetching secret data:', error));
 }
 
 function handleRedirect() {
@@ -49,5 +49,19 @@ function getUserInfo(accessToken) {
         .catch(error => console.error('Error fetching user info:', error));
 }
 
-function logoutSpotify(){
+function toggleFullscreen() {
+    var iframe = document.getElementsByClassName('game-iframe')[0];
+    if (iframe.requestFullscreen) {
+        iframe.requestFullscreen();
+    } else if (iframe.mozRequestFullScreen) { /* Firefox */
+        iframe.mozRequestFullScreen();
+    } else if (iframe.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+        iframe.webkitRequestFullscreen();
+    } else if (iframe.msRequestFullscreen) { /* IE/Edge */
+        iframe.msRequestFullscreen();
+    }
+}
+
+function logoutSpotify() {
+    window.location.href = '/src/view/login.html';
 }

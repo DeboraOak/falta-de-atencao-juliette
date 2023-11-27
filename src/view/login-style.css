@@ -1,14 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200&display=swap');
 
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
 body {
     margin: 0;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #fff;
-    background-color: #000;
-    font-family: 'Montserrat', sans-serif;
 }
 
 .container-login {
@@ -37,10 +42,10 @@ button {
     margin: 0 10px;
     width: 200px;
     padding: 10px 0;
-    box-shadow: 0 0 20px rgba(104, 85, 224, 0.2);
+    box-shadow: 0 0 20px rgba(245, 245, 245, 0.247);
     transition: 0.4s;
+    color: #000;
     background-color: #19E68C;
-    font-family: 'Montserrat', sans-serif;
 }
 
 button:hover {

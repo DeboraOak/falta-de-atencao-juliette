@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200&display=swap');
 
-body {
+* {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
     background-color: #000;
@@ -17,31 +17,37 @@ body {
     display: flex;
     flex-direction: row;
     height: 30%;
-    padding: 0 5vw;
+    padding: 0 3vw;
 }
 
-.header .album-details {
+.album-details,
+.spotify-iframe {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    width: 100%;
 }
 
-.header .album-details img {
-    width: 30%;
+.album-details img {
+    width: 25%;
 }
 
-.header .album-details p {
-    width: 50%;
+.album-details p {
+    width: 70%;
+    height: auto;
+    overflow: hidden;
 }
 
-.header .spotify-iframe {
+.spotify-iframe {
     padding-top: 30px;
+    margin: 0;
 }
 
-.header iframe {
-    height: 100%;
+.spotify-iframe iframe{
+    width: 70%;
+    height: 80%;
 }
 
 .game-container {
@@ -50,41 +56,55 @@ body {
     flex-direction: column;
 }
 
-.game-container .game-iframe {
+.game-iframe {
     height: 60vh;
-    padding: 0 5vw;
-    
+    padding: 0 3vw;
+
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.game-container .full-screen {
+.full-screen {
     height: 1rem;
     width: 1rem;
 
-    background-color: #000;
     border: none;
 
     cursor: pointer;
-    margin: 1vh 5vw 0 auto;
+    margin: 1vh 3vw 0 auto;
 }
 
-button{
+button {
     justify-content: center;
     align-items: center;
-    
+
     border: none;
-    color: #fff;
     background-color: transparent;
     cursor: pointer;
 
     font-size: 0.9rem;
-    font-family: 'Montserrat', sans-serif;
     margin: auto;
 }
 
 button:hover {
     color: #918888;
     transition: 0.2s;
+}
+
+/* Media query para ajustar estilos em telas menores */
+@media screen and (max-width: 600px) {
+
+    .header img {
+        width: 50%;
+    }
+
+    .header p {
+        font-size: 12px;
+        text-align: left;
+    }
+
+    .game-container .game-iframe {
+        padding: 0 2vw;
+    }
 }

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="../view/main-style.css">
     <title>Game-Spotify</title>
 </head>
@@ -22,19 +22,19 @@
             </div>
 
             <div class="spotify-iframe">
-                <iframe
-                    src="https://open.spotify.com/embed/playlist/0X0H0AUS08ScYlOHUaKDE0?utm_source=generator&theme=0"
-                    frameborder="0" allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture'>
-                </iframe>
+                <iframe style="border-radius:12px"
+                    src="https://open.spotify.com/embed/album/4IWuMtqZOCu5or3RXZQ26v?utm_source=generator"
+                    frameBorder="0" loading="lazy"
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                ></iframe>
             </div>
 
         </div>
 
         <div class="game-container">
 
-            <iframe class="game-iframe"
-                src="../../game/index.html"
-                frameborder="0" allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture'>
+            <iframe class="game-iframe" src="../../game/index.html" frameborder="0"
+                allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture'>
             </iframe>
 
             <img class="full-screen" onclick="toggleFullscreen()" src="../images/full-screen-icon.png" alt="">

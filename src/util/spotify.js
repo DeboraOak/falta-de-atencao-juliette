@@ -60,6 +60,17 @@ function toggleFullscreen() {
     } else if (iframe.msRequestFullscreen) { /* IE/Edge */
         iframe.msRequestFullscreen();
     }
+
+    // Altera a orientação do dispositivo ao entrar em fullscreen no celular
+    setOrientation('landscape');
+}
+
+function setOrientation(orientation){
+    if (screen.orientation) {
+        screen.orientation.lock(orientation).catch(error => {
+            console.error('Error locking orientation:', error);
+        });
+    }
 }
 
 function logoutSpotify() {

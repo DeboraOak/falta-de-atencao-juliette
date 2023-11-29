@@ -2,126 +2,113 @@
 
 * {
     margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    background-color: #000;
+    padding: 0;
     color: #fff;
+    background-color: #000;
+    font-family: 'Montserrat', sans-serif;
 }
 
-.flex-container {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-.header {
-    display: flex;
-    flex-direction: row;
-    height: 30%;
-    padding: 0 3vw;
-}
-
-.album-details,
-.spotify-iframe {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 50%;
-}
-
-.album-details img {
-    width: 25%;
-}
-
-.album-details p {
-    width: 70%;
-    height: auto;
-    overflow: hidden;
-}
-
-.spotify-iframe {
-    padding-top: 30px;
+body {
+    width: 100vw;
+    height: 110vh;
     margin: 0;
 }
 
-.spotify-iframe iframe{
-    width: 80%;
-    height: 100%;
-}
-
-.game-container {
-    margin-top: 24px;
+.flex-container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.game-iframe {
-    height: 60vh;
-    padding: 0 3vw;
+.header {
+    text-align: center;
+    font-size: 16px;
+    padding-top: 4vh;
+}
 
+.album-details img {
+    width: 50%;
+}
+
+.album-details p {
+    padding: .4rem;
+}
+
+.spotify-player {
+    padding-top: 1.5vh;
+}
+
+#spotify-iframe {
+    width: 90vw;
+    height: 20vh;
+}
+
+.game {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.full-screen {
-    height: 1rem;
-    width: 1rem;
-
-    border: none;
-
-    cursor: pointer;
-    margin: 1vh 3vw 0 auto;
+#game-iframe {
+    width: 100vw;
+    height: 30vh;
 }
 
-button.logout-spotify {
-    justify-content: center;
-    align-items: center;
-
+button#full-screen,
+button#logout-spotify {
     border: none;
-    background-color: transparent;
     cursor: pointer;
-
-    font-size: 0.9rem;
-    margin: auto;
+    margin-top: 1vh;
+   
+    font-size: 0.8rem;
+}
+#full-screen img {
+    width: 1.5rem;
+    height: 1.5rem;
 }
 
-button:hover .logout-spotify{
+button#full-screen:hover,
+button#logout-spotify:hover {
     color: #918888;
     transition: 0.2s;
 }
 
-/* Media query para ajustar estilos em telas menores */
-@media screen and (max-width: 600px) {
-
-    .flex-container {
-        overflow: auto;
-    }
+@media screen and (min-width: 600px) {
     .header {
-        flex-direction: column;
-        padding: 0 2vw;
-        min-height: 40vh;
+        display: flex;
+        flex-direction: row;
+        padding: 3vh 15vw;
     }
 
-    .header img {
+    .spotify-player,
+    .album-details {
         width: 50%;
     }
-    
-    .header p {
-        width: 100%;
-        font-size: 12px;
-        text-align: center;
-    }
-    
-    .album-details,
-    .spotify-iframe {
-        width: auto;
-        height: auto;
-        padding: auto;
+
+    #spotify-iframe {
+        width: 90%;
+        height: 100%;
     }
 
-    .game-container .game-iframe {
-        padding: 0 2vw;
+    .game {
+        width: 100%;
+        height: 75vh;
+        padding: 0 20%;
+        box-sizing: border-box;
+    }
+
+    #game-iframe {
+        width: 100%;
+        height: 100%;
+        max-width: 1100px;
+        min-width: 700px;
+        max-height: 75vh;
+    }
+
+    #logout-spotify {
+        padding-top: 2vh;
+        font-size: 13px;
     }
 }

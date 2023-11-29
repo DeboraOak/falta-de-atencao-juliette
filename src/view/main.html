@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="../view/main-style.css">
     <title>Jogue Agora - Falta de Atenção</title>
@@ -12,9 +12,8 @@
 <body>
     <div class="flex-container">
         <div class="header">
-
             <div class="album-details">
-                <img src="../images/falta-de-atencao-logo.png" alt="Banda Calypso Logo">
+                <img src="../images/falta-de-atencao-logo.png" alt="Falta de Atenção Logo">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate dolorum nesciunt voluptate qui
                     officia
                     cum sapiente quae aperiam eius dicta? Laboriosam neque suscipit excepturi necessitatibus voluptate
@@ -22,25 +21,21 @@
                     voluptatem, nulla.</p>
             </div>
 
-            <div class="spotify-iframe">
-                <iframe id="spotify-player" style="border-radius:12px"
-                    src="https://open.spotify.com/embed/album/4IWuMtqZOCu5or3RXZQ26v?utm_source=generator"
-                    frameBorder="0" loading="lazy"
-                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                ></iframe>
+            <div class="spotify-player">
+                <iframe id="spotify-iframe" style="border-radius:12px"
+                    src="https://open.spotify.com/embed/playlist/74ySAz6VTP7EMRgTrJxRzR?utm_source=generator"
+                    frameBorder="0" allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+                </iframe>
             </div>
-
         </div>
-
-        <div class="game-container">
-
-            <iframe class="game-iframe" src="../../game/index.html" frameborder="0"
+        <div class="game">
+            <iframe id="game-iframe" src="../../game/index.html" frameborder="0"
                 allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture'>
             </iframe>
-
-            <img class="full-screen" onclick="toggleFullscreen()" src="../images/full-screen-icon.png" alt="">
+            <button id="full-screen" onclick="toggleFullscreen()"><img src="../images/full-screen-icon.png" alt="Abrir em Tela Cheia"> </button>
+            <button id="logout-spotify" onclick="logoutSpotify()">Desconetar do Spotify</button>
         </div>
-        <button class="logout-spotify" onclick="logoutSpotify()">Desconetar do Spotify</button>
     </div>
     <script src="../util/spotify.js"></script>
 </body>

@@ -25,6 +25,10 @@ body {
     text-align: center;
     font-size: 16px;
     padding-top: 4vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .album-details img {
@@ -78,15 +82,28 @@ button#logout-spotify:hover {
 @media screen and (min-width: 600px) {
     .header {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         padding: 3vh 15vw;
+        align-items: center;
     }
 
     .spotify-player,
     .album-details {
-        width: 50%;
+        width: 100%;
     }
 
+    .album-details img{
+        width: 30%;
+    }
+
+    .album-details p{
+        text-align: justify;
+    }
+
+    .social-link{
+        text-decoration: none;
+    }
+    
     #spotify-iframe {
         width: 90%;
         height: 100%;

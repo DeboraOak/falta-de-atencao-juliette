@@ -1,5 +1,5 @@
 function loginWithSpotify() {
-    fetch('/getSecretData')
+    fetch('/fdaspotify/getSecretData')
         .then(response => response.json())
         .then(data => {
             console.log(data)
